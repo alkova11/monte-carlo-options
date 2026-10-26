@@ -29,7 +29,7 @@ tests, locked dependencies and a methodology report explaining the modelling cho
 
 Repository: https://github.com/alkova11/monte-carlo-options
 
-Live app: https://monte-carlo-options-lab-alkova11.adeptrhea24.chatgpt.site
+Live app: https://mcopricingsim.adeptrhea24.chatgpt.site
 
 These are conditional risk-neutral model prices, not forecasts of market returns.
 
