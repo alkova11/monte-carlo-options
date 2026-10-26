@@ -1,0 +1,14 @@
+{
+  "option": {
+    "spot": 100,
+    "strike": 100,
+    "rate": 0.05,
+    "dividend_yield": 0.02,
+    "volatility": 0.2,
+    "maturity": 1,
+    "option_type": "call"
+  },
+  "samples": 100000,
+  "seed": 42,
+  "method": "control"
+}

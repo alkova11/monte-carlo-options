@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "run_id": "158e2dff-6404-46bb-b98a-f90a16440d0e",
+  "project": "monte-carlo-options",
+  "started_at": "2026-10-25T20:53:14.914896+00:00",
+  "finished_at": "2026-10-25T20:53:15.372298+00:00",
+  "status": "succeeded",
+  "config": {
+    "option": {
+      "spot": 100,
+      "strike": 100,
+      "rate": 0.05,
+      "dividend_yield": 0.02,
+      "volatility": 0.2,
+      "maturity": 1,
+      "option_type": "call"
+    },
+    "samples": 20000,
+    "seed": 1776,
+    "observation_dates": [
+      0.08333333333333333,
+      0.16666666666666666,
+      0.25,
+      0.3333333333333333,
+      0.4166666666666667,
+      0.5,
+      0.5833333333333334,
+      0.6666666666666666,
+      0.75,
+      0.8333333333333334,
+      0.9166666666666666,
+      1.0
+    ],
+    "reference_samples": 500000,
+    "replicates": 50
+  },
+  "config_sha256": "310346c7497009727bacbb92f7f726a42421630e58b1037a8793f31c9cd5102a",
+  "seed": 1776,
+  "lock_sha256": "de4ac63664d0ec3998ca2c0b55c3343a4a9c425a083c63c4c243162a6aeee3ef",
+  "source_sha256": "c522c64a47f36726e5645d5e34f320cf9705d280cf9830f52ff537b0f9581bf2",
+  "dataset_ids": [],
+  "dataset_hashes": [],
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpus": 10,
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "plotly": "7.1.0",
+      "streamlit": "1.66.1"
+    },
+    "timing_note": "perf_counter wall time; single process; no CPU affinity; warmup excluded; hardware load uncontrolled"
+  },
+  "git_commit": null,
+  "dirty": null,
+  "git_note": "Git unavailable (CalledProcessError); source tree hash recorded instead.",
+  "artifacts": [
+    {
+      "artifact_id": "dce818aa-92b4-4467-91f9-af07502f05d2",
+      "kind": "json",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/configuration.json",
+      "sha256": "e05ea500f235a0cb6a7a1cb5231319ef93da6568b2c25a3ba5871fedd40fa9bd",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "1e6f8692-561c-42c1-85fa-f89324daf74b",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/pricing_cases.parquet",
+      "sha256": "157f93e7fbaf56e4914a703aa1ece4ad18d3d4d8bb147b1e0159fc4a9f42d612",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "53751891-350b-453a-a72f-61964ce8cbff",
+      "kind": "csv",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/pricing_cases.csv",
+      "sha256": "805a3af514ef7d781b5c961f78f0378f79cf4e554ae84a279ed1534f25f6c100",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "d7a39b77-f699-4c32-afdd-1463541552d6",
+      "kind": "json",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/reference.json",
+      "sha256": "e76c5557afbbd6c2a875e8c04d54def535036d99699342418959328099fd6a8c",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "c17a860e-aa13-42dd-b625-8976df591ae2",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/asian_replicates.parquet",
+      "sha256": "2d86e801c9e1589ad25898be547cdddf481e0395ff18ee969f85c14a8cd2ffe1",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "576b9b59-1613-4508-afdb-c98e99fb98d3",
+      "kind": "csv",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/asian_replicates.csv",
+      "sha256": "0cd3172d79966ad505df142a4ddf7332a177f00e16eb4b8291821232dc8dcb84",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "99a65756-2e44-4977-b302-975b7515f48c",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/summary.parquet",
+      "sha256": "efdab7040fea0714db85731fcab57dd76e13a600c8abb4727f5a6f84d494780f",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "11fb9022-f8f6-4d68-ad29-dc12817ec216",
+      "kind": "csv",
+      "file_uri": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e/summary.csv",
+      "sha256": "1d305a6a0408e4423a5c482450b70afe38d238190101696bc18e7ef2ab31d00c",
+      "schema_version": "1.0"
+    }
+  ],
+  "failure_reason": null
+}

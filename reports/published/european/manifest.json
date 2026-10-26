@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "run_id": "b68726db-6b93-484f-a6b5-f7ffce9ff9ca",
+  "project": "monte-carlo-options",
+  "started_at": "2026-10-25T20:53:06.940330+00:00",
+  "finished_at": "2026-10-25T20:53:07.236258+00:00",
+  "status": "succeeded",
+  "config": {
+    "option": {
+      "spot": 100,
+      "strike": 100,
+      "rate": 0.05,
+      "dividend_yield": 0.02,
+      "volatility": 0.2,
+      "maturity": 1,
+      "option_type": "call"
+    },
+    "samples": 100000,
+    "seed": 42,
+    "method": "control"
+  },
+  "config_sha256": "81d927c0c772efc938d5a8efe6cabf4e1e0a0018f18a1432d74b815d6bae3e30",
+  "seed": 42,
+  "lock_sha256": "de4ac63664d0ec3998ca2c0b55c3343a4a9c425a083c63c4c243162a6aeee3ef",
+  "source_sha256": "c522c64a47f36726e5645d5e34f320cf9705d280cf9830f52ff537b0f9581bf2",
+  "dataset_ids": [],
+  "dataset_hashes": [],
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpus": 10,
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "plotly": "7.1.0",
+      "streamlit": "1.66.1"
+    },
+    "timing_note": "perf_counter wall time; single process; no CPU affinity; warmup excluded; hardware load uncontrolled"
+  },
+  "git_commit": null,
+  "dirty": null,
+  "git_note": "Git unavailable (CalledProcessError); source tree hash recorded instead.",
+  "artifacts": [
+    {
+      "artifact_id": "1cbecdf2-a49a-453a-bcf2-83fc975a8c45",
+      "kind": "json",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/configuration.json",
+      "sha256": "ea576a6cc88770ec6011697e993fb790f6effd9c720a91293778e0da96b318a1",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "6173e65d-95be-48aa-913b-81a39936429d",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/pricing_cases.parquet",
+      "sha256": "be177326332ff8d91d1816a6cb77985e338bbb2edf4bf134c2aef10fe037abfb",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "311fa555-013f-498f-bf5e-fc0adfe861d2",
+      "kind": "csv",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/pricing_cases.csv",
+      "sha256": "c32114e1986e50278902ef2e36ec1186e489bb7f9986adec5b66d706b81ed21a",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "1661a3dd-ea64-4a31-afcb-db4ca6a744d2",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/estimates.parquet",
+      "sha256": "2252d4123d037c64c4aaf5c0bd62f4b2f26616d8d2cffc1ea71a2d19e77c2cfd",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "91b15b7d-70db-4fe5-b9cc-7030ae3fa268",
+      "kind": "csv",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/estimates.csv",
+      "sha256": "6f56a0f32fc1bf51e50072a260e9ca5d74381822602facb65e10871813b55493",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "a6a7b1de-25de-4aba-9b70-617335e0684f",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/convergence_points.parquet",
+      "sha256": "7e7cc1de022b3d6524b9ff6a8cd8ae46374f0b4d285cfcb5f85105cb0bf6863f",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "83b21656-c2d1-4118-8da8-0c2a2531b14c",
+      "kind": "csv",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/convergence_points.csv",
+      "sha256": "b0f615e653cb6f94624a767088041375091bdbbfa5ff90f51c78ad4d1e5739d8",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "60c7f60b-e1cb-4247-a463-e07b684fe6db",
+      "kind": "interactive_figure",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/paths.html",
+      "sha256": "02897eee98510913a77046e096748d295aae6ae7075514a48905525ca27d3987",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "b0db347b-02f9-40e1-ae74-4b7d2c631ced",
+      "kind": "interactive_figure",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/payoffs.html",
+      "sha256": "0d63329a3b7528569d0887f09f7d6e8d22a6c22fe7645136edf4e20570747cab",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "689181a4-3b0b-4b12-b696-2cbf73a82c33",
+      "kind": "interactive_figure",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/convergence.html",
+      "sha256": "6a842d5d5898b286dba64638304880ee01dd63139d72e0f1c357a2f2151d9782",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "c8f62b80-c78f-496e-b48d-456db8ab160b",
+      "kind": "numpy_arrays",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/simulation.npz",
+      "sha256": "434e90e68f852ad8a34bb899f7d6e66575ba0d5e6416bc94008ddd3ca14e2daa",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "be568f70-aa92-45c6-8de4-fa6a3565115d",
+      "kind": "numpy_arrays",
+      "file_uri": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca/visual_paths.npz",
+      "sha256": "b35cd47bf0f07742648f6b4fa6299684c8d67cf9d91d30d6374240f2c25473bd",
+      "schema_version": "1.0"
+    }
+  ],
+  "failure_reason": null
+}

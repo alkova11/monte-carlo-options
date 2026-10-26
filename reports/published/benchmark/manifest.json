@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0",
+  "run_id": "cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d",
+  "project": "monte-carlo-options",
+  "started_at": "2026-10-25T20:53:08.109860+00:00",
+  "finished_at": "2026-10-25T20:53:14.081055+00:00",
+  "status": "succeeded",
+  "config": {
+    "seed": 20261025,
+    "replicates": 100,
+    "sample_counts": [
+      1000,
+      4000,
+      16000
+    ],
+    "cases": [
+      {
+        "case_id": "call_K80_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K80_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K80_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K80_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K100_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K100_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K100_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K100_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K120_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K120_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K120_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "call_K120_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "call"
+        }
+      },
+      {
+        "case_id": "put_K80_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K80_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K80_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K80_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 80,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K100_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K100_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K100_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K100_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 100,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K120_v0.15_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K120_v0.15_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.15,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K120_v0.4_T0.25",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 0.25,
+          "option_type": "put"
+        }
+      },
+      {
+        "case_id": "put_K120_v0.4_T2.0",
+        "option": {
+          "spot": 100,
+          "strike": 120,
+          "rate": 0.05,
+          "dividend_yield": 0.02,
+          "volatility": 0.4,
+          "maturity": 2.0,
+          "option_type": "put"
+        }
+      }
+    ]
+  },
+  "config_sha256": "d4d4077b8c98abd3110a0ce8ac7ee39298119722c5df23dbca6b6bb8ffe3c185",
+  "seed": 20261025,
+  "lock_sha256": "de4ac63664d0ec3998ca2c0b55c3343a4a9c425a083c63c4c243162a6aeee3ef",
+  "source_sha256": "c522c64a47f36726e5645d5e34f320cf9705d280cf9830f52ff537b0f9581bf2",
+  "dataset_ids": [],
+  "dataset_hashes": [],
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpus": 10,
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "plotly": "7.1.0",
+      "streamlit": "1.66.1"
+    },
+    "timing_note": "perf_counter wall time; single process; no CPU affinity; warmup excluded; hardware load uncontrolled"
+  },
+  "git_commit": null,
+  "dirty": null,
+  "git_note": "Git unavailable (CalledProcessError); source tree hash recorded instead.",
+  "artifacts": [
+    {
+      "artifact_id": "63d201ad-cb65-4b74-8137-89c94d178653",
+      "kind": "json",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/configuration.json",
+      "sha256": "b2852fe94bda33931a8fe5f44678a52b486f4f4bc871e36e9b331a3f1fec69fb",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "beca5627-668b-4196-bf2e-0901a674ba80",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/pricing_cases.parquet",
+      "sha256": "e7a86cbfb885ac8483565d90680b14dd248ed506e21fc19647a85ffadd051669",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "cc2e0fac-f3ab-4472-8c89-a3283afea8dc",
+      "kind": "csv",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/pricing_cases.csv",
+      "sha256": "5e70b47e484c03e5b04daf72ae11442aecd33e384559d519225f09080b9b05b2",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "ec5db1bf-2f17-471d-be58-19859d2aaff7",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/benchmark_replicates.parquet",
+      "sha256": "3a89e9c0f310076c3007ed6033f9a0e331e9bedd118cfc76d93ed83567b045a8",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "8f91be9d-c79b-49ea-90dd-d969c1594b87",
+      "kind": "csv",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/benchmark_replicates.csv",
+      "sha256": "4b078cceacb4e7f3e5ca07e0d62b4853149088900a601fcadd0800e57ebea334",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "bed24531-5efb-4c55-bfb7-87c08b9e5710",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/summary.parquet",
+      "sha256": "44f602be4f75bc89fafa5c4827be8e35885576e713e50449797c4a1f985fd9e3",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "6fe7ee71-9e42-4c10-8f2e-121e278f7127",
+      "kind": "csv",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/summary.csv",
+      "sha256": "316607c47c48a3da388be38d740639ece23a407b67acf5a6fe9ff2fc095578b0",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "d1ecb51b-ff26-4935-acfd-35b85a7bea9b",
+      "kind": "parquet",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/convergence_rates.parquet",
+      "sha256": "4936cc34f67ea57c1245b208d828b98d7dc19e4d1155a0920840dc4e779e5449",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "11785d7c-6afc-4cae-bd79-d88192e219bb",
+      "kind": "csv",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/convergence_rates.csv",
+      "sha256": "3523854107000b865ecc27dff7e2c2a33626154aceb569e16cf9d891c5ce3a9a",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "4a279b08-dd1d-4ff5-bf33-6808c9581e4b",
+      "kind": "interactive_figure",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/rmse.html",
+      "sha256": "5357bfeb60f4acbea2d6d7e68ff0508402fb826f54399142cee8d1ad05e9f2df",
+      "schema_version": "1.0"
+    },
+    {
+      "artifact_id": "45133ee2-db52-4469-94ea-3e77f109a376",
+      "kind": "interactive_figure",
+      "file_uri": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d/error_time.html",
+      "sha256": "d141d9151db33dca16738f50b45f1bfc9b96c999d5b85a332882955723baaa6e",
+      "schema_version": "1.0"
+    }
+  ],
+  "failure_reason": null
+}

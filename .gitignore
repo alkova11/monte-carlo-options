@@ -1,0 +1,30 @@
+.venv/
+.bootstrap/
+.uv-cache/
+.python/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+reports/experiments/*
+!reports/experiments/.gitkeep
+data/raw/
+data/processed/
+
+.browsers/
+
+node_modules/
+.npm-cache/
+
+# Local build instructions and prepared source archives
+/AGENTS.md
+/release/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Hosted Site checkout has its own source repository
+/hosted/

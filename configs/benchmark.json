@@ -1,0 +1,299 @@
+{
+  "seed": 20261025,
+  "replicates": 100,
+  "sample_counts": [
+    1000,
+    4000,
+    16000
+  ],
+  "cases": [
+    {
+      "case_id": "call_K80_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K80_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K80_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K80_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K100_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K100_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K100_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K100_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K120_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K120_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K120_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "call_K120_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "call"
+      }
+    },
+    {
+      "case_id": "put_K80_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K80_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K80_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K80_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 80,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K100_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K100_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K100_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K100_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 100,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K120_v0.15_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K120_v0.15_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.15,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K120_v0.4_T0.25",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 0.25,
+        "option_type": "put"
+      }
+    },
+    {
+      "case_id": "put_K120_v0.4_T2.0",
+      "option": {
+        "spot": 100,
+        "strike": 120,
+        "rate": 0.05,
+        "dividend_yield": 0.02,
+        "volatility": 0.4,
+        "maturity": 2.0,
+        "option_type": "put"
+      }
+    }
+  ]
+}

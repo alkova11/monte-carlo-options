@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1015">
+  <meta name="description" content="A local quantitative research lab for Monte Carlo option pricing and variance reduction.">
+  <title>Monte Carlo — Options Lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23c2ed83'/%3E%3Cpath d='M9 28V12l11 11 11-11v16' fill='none' stroke='%230c1015' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/assets/plotly.min.js" defer></script>
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+<aside class="sidebar" aria-label="Main navigation">
+  <a class="brand" href="#lab" aria-label="Monte Carlo home"><span class="brand-symbol">m<span>c</span></span><span>MONTE<span class="brand-second">CARLO<span class="brand-dot">.</span></span></span></a>
+  <div class="sidebar-section">WORKSPACE</div>
+  <nav class="nav">
+    <button class="nav-item active" data-page="lab" aria-current="page"><svg viewBox="0 0 20 20"><path d="M3 15V5m0 10h14M6 12l3-5 4 3 4-7"/></svg>Pricing lab<span class="nav-count">01</span></button>
+    <button class="nav-item" data-page="research"><svg viewBox="0 0 20 20"><path d="M4 16V9m6 7V4m6 12v-5"/></svg>Research<span class="nav-count">02</span></button>
+    <button class="nav-item" data-page="methodology"><svg viewBox="0 0 20 20"><path d="M4 3h9l3 3v11H4zM12 3v4h4M7 10h6m-6 3h6"/></svg>Methodology<span class="nav-count">03</span></button>
+  </nav>
+  <div class="sidebar-note"><span class="tiny-label">THE RESEARCH QUESTION</span><p>Same budget.<br>Less noise.<br>Better estimates.</p><div class="mini-paths" aria-hidden="true"><svg viewBox="0 0 160 75"><path d="M1 42l15-3 10 8 12-25 14 9 15-10 14 16 13-25 14 19 13-4 15-15 14 5 9-14"/><path d="M1 42l15 5 10-3 12 10 14-12 15 3 14-12 13 8 14-3 13 14 15-13 14 9 9-4"/><path d="M1 42l15-1 10-4 12 8 14-1 15 6 14-3 13 11 14-2 13 7 15-6 14 10 9-2"/></svg></div></div>
+  <div class="sidebar-footer"><span class="status-dot"></span><div>Local Python engine<small>Exact GBM · float64</small></div><span class="local-icon">↗</span></div>
+</aside>
+<div class="app">
+  <header class="topbar"><div class="breadcrumb">Workspace<span>/</span><strong id="breadcrumb-current">Pricing lab</strong></div><div class="topbar-right"><span class="local-badge"><span class="status-dot"></span>RUNNING LOCALLY</span><span class="version">v0.2</span></div></header>
+  <main>
+    <section id="page-lab" class="page">
+      <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>SIMULATE. COMPARE. UNDERSTAND.</div><h1>The pricing lab<span class="accent">.</span></h1><p>A controlled experiment in randomness. Explore the price of uncertainty.</p></div><div class="model-stamp"><span class="tiny-label">PRICING FRAMEWORK</span><strong>Risk-neutral GBM</strong><span>European & discrete Asian options</span></div></div>
+      <div class="workspace-grid">
+        <section class="parameters panel" aria-labelledby="parameters-heading">
+          <div class="panel-heading"><h2 id="parameters-heading"><svg viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14M7 3v4m6 1v4m-5 1v4"/></svg>Parameters</h2><button id="reset" class="text-button" type="button">Reset ↺</button></div>
+          <form id="pricing-form">
+            <label class="field-label" for="product">CONTRACT</label>
+            <select id="product" name="product"><option value="European">European option</option><option value="Arithmetic Asian">Arithmetic Asian option</option></select>
+            <div class="option-toggle" role="group" aria-label="Option type"><button type="button" class="chosen" data-kind="call" aria-pressed="true">Call <span>↗</span></button><button type="button" data-kind="put" aria-pressed="false">Put <span>↘</span></button></div>
+            <div class="divider-label">UNDERLYING & MARKET</div>
+            <div class="input-grid">
+              <label>Spot price <span class="unit">units</span><input id="spot" name="spot" type="number" min="0.01" max="1000000000" step="any" value="100" required></label>
+              <label>Strike price <span class="unit">units</span><input id="strike" name="strike" type="number" min="0.01" max="1000000000" step="any" value="100" required></label>
+              <label>Risk-free rate <span class="unit">% / yr</span><input id="rate" name="rate" type="number" min="-100" max="100" step="any" value="5" required></label>
+              <label>Dividend yield <span class="unit">% / yr</span><input id="dividend" name="dividend" type="number" min="-100" max="100" step="any" value="2" required></label>
+              <label>Volatility <span class="unit">% / √yr</span><input id="volatility" name="volatility" type="number" min="0" max="300" step="any" value="20" required></label>
+              <label>Maturity <span class="unit">years</span><input id="maturity" name="maturity" type="number" min="0" max="50" step="any" value="1" required></label>
+            </div>
+            <div id="asian-fields" hidden><label for="dates">Observation dates <span class="unit">years</span></label><textarea id="dates" rows="3">0.0833333333, 0.1666666667, 0.25, 0.3333333333, 0.4166666667, 0.5, 0.5833333333, 0.6666666667, 0.75, 0.8333333333, 0.9166666667, 1</textarea><p class="field-help">Equal weights. Include date 0 only to include the initial spot. Payment at maturity.</p></div>
+            <div class="divider-label">SIMULATION</div>
+            <label for="samples">Sample budget <span class="unit">payoffs</span></label><input id="samples" name="samples" type="number" min="100" max="2000000" step="1" value="100000" required>
+            <div class="budget-presets"><button type="button" data-budget="10000">10k</button><button type="button" class="chosen" data-budget="100000">100k</button><button type="button" data-budget="1000000">1m</button></div>
+            <label for="seed">Random seed <span class="unit">reproducible</span></label><input id="seed" name="seed" type="number" min="0" max="2147483647" step="1" value="42" required>
+            <div id="form-error" role="alert" hidden></div>
+            <button id="run-button" class="primary-button" type="submit"><span class="run-icon">▷</span><span id="run-label">Run simulation</span><span class="key-hint">⌘ ↵</span></button>
+            <p class="form-footnote">Exact terminal sampling.<br>Pilot draws included in your budget.</p>
+          </form>
+        </section>
+        <div class="results-column">
+          <div class="results-toolbar"><div class="section-label"><span class="status-dot" id="result-dot"></span><span id="result-state" aria-live="polite">READY TO SIMULATE</span></div><div class="estimator-switch" role="group" aria-label="Displayed estimator"><button type="button" data-method="ordinary">Ordinary</button><button type="button" data-method="antithetic">Antithetic</button><button type="button" data-method="control" class="chosen">Control variate</button></div></div>
+          <div id="stale-note" class="notice" hidden>Parameters changed. Showing the previous saved run until you run again.</div>
+          <div id="warning" class="warning" role="status" hidden></div>
+          <div class="metrics" aria-live="polite">
+            <article class="metric-card featured"><div class="metric-label">Estimated price<span class="metric-symbol">◈</span></div><div id="metric-price" class="metric-value">—</div><div id="metric-price-note" class="metric-note">Currency units</div></article>
+            <article class="metric-card"><div class="metric-label">Standard error<span class="metric-symbol">±</span></div><div id="metric-se" class="metric-value">—</div><div id="metric-se-note" class="metric-note">Across independent units</div></article>
+            <article class="metric-card"><div class="metric-label" id="reference-label">Black–Scholes<span class="metric-symbol">ƒ</span></div><div id="metric-reference" class="metric-value">—</div><div id="metric-reference-note" class="metric-note">Analytical reference</div></article>
+            <article class="metric-card"><div class="metric-label" id="error-label">Absolute error<span class="metric-symbol">Δ</span></div><div id="metric-error" class="metric-value">—</div><div id="metric-error-note" class="metric-note">Distance from reference</div></article>
+          </div>
+          <div class="chart-grid">
+            <article class="panel chart-card"><div class="chart-heading"><div><span class="chart-index">01</span><h2>Simulated price paths</h2></div><span class="chart-tag">30 VISUAL PATHS</span></div><div id="paths-chart" class="chart"><div class="chart-empty">Your paths start here<span>Run a simulation to explore risk-neutral GBM.</span></div></div><p class="chart-caption">A separate visual sample. European prices use terminal values only.</p></article>
+            <article class="panel chart-card"><div class="chart-heading"><div><span class="chart-index">02</span><h2>Payoff distribution</h2></div><span class="chart-tag">DISCOUNTED</span></div><div id="payoffs-chart" class="chart"><div class="chart-empty">The shape of your payoff<span>Zero-payoff mass is shown separately.</span></div></div><p class="chart-caption" id="zero-caption">Raw payoffs before any control adjustment.</p></article>
+          </div>
+          <article class="panel convergence-card"><div class="chart-heading"><div><span class="chart-index">03</span><h2>Price convergence</h2></div><span class="chart-tag" id="convergence-tag">POINTWISE 95% CI</span></div><div id="convergence-chart" class="chart wide-chart"><div class="chart-empty">Watch the estimate settle<span>Running price, uncertainty and analytical reference.</span></div></div><div class="convergence-footer"><span><i class="legend-dot lime"></i>Running estimate<i class="legend-dash"></i><span id="benchmark-legend">Black–Scholes</span><i class="legend-band"></i>≈95% interval</span><span>Nested samples · dependent estimates</span></div></article>
+          <article class="panel comparison-card"><div class="chart-heading"><div><span class="chart-index">04</span><h2>Every estimator. One budget.</h2></div><button id="download-csv" type="button" class="text-button" disabled>Export CSV ↗</button></div><div class="table-scroll"><table id="comparison"><thead><tr><th>ESTIMATOR</th><th>PRICE</th><th>STD. ERROR</th><th>95% CI</th><th>ABS. ERROR</th><th>INDEP. UNITS</th><th>RUNTIME</th></tr></thead><tbody id="comparison-body"><tr><td colspan="7" class="empty-row">Run your first experiment to compare the estimators.</td></tr></tbody></table></div><div class="comparison-footnote"><span>Antithetic uncertainty uses independent pairs. Controls use a separate pilot.</span><button type="button" id="show-details" class="text-button">Budget details <span>↗</span></button></div></article>
+          <div class="run-footer"><span id="run-provenance">Seeded, reproducible and saved on your computer.</span><div><button id="download-config" class="text-button" type="button" disabled>Config JSON ↓</button><button id="download-zip" class="secondary-button" type="button" disabled>Download run ↓</button></div></div>
+        </div>
+      </div>
+      <footer class="page-footer"><span><span class="accent">◈</span> Model prices, not market forecasts.</span><span>Constant volatility · continuous dividends · European exercise</span></footer>
+    </section>
+    <section id="page-research" class="page" hidden>
+      <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>REPEATED SEEDS. MEASURED EVIDENCE.</div><h1>Beyond a single run<span class="accent">.</span></h1><p>Accuracy, interval coverage and cost across the saved benchmark study.</p></div><span class="outline-badge">SAVED EXPERIMENT</span></div>
+      <div id="research-error" class="warning" hidden></div>
+      <div class="research-intro panel"><div><span class="tiny-label">EXPERIMENT DESIGN</span><h2 id="research-count">Loading saved evidence…</h2><p>Calls and puts · strikes 80 / 100 / 120 · volatility 15% / 40% · maturity 0.25 / 2 years</p></div><a class="secondary-button" href="/docs/results" target="_blank" rel="noopener">Read full results ↗</a></div>
+      <div class="metrics research-metrics" id="research-metrics"></div>
+      <div class="research-case"><label for="research-case">Inspect a pricing case</label><select id="research-case"></select><span class="field-help">100 independent seeds per method and budget.</span></div>
+      <div class="chart-grid research-charts"><article class="panel chart-card"><div class="chart-heading"><div><span class="chart-index">01</span><h2>Error vs. sample budget</h2></div></div><div id="research-rmse" class="chart research-chart"></div><p class="chart-caption">Empirical RMSE. Error bars are approximate 95% delta-method intervals.</p></article><article class="panel chart-card"><div class="chart-heading"><div><span class="chart-index">02</span><h2>Error vs. computation time</h2></div></div><div id="research-time" class="chart research-chart"></div><p class="chart-caption">Wall time includes pilots. Measured on one host; load was uncontrolled.</p></article></div>
+      <article class="panel comparison-card"><div class="chart-heading"><div><span class="chart-index">03</span><h2>The case in numbers</h2></div></div><div class="table-scroll"><table><thead><tr><th>ESTIMATOR</th><th>BUDGET</th><th>RMSE</th><th>COVERAGE</th><th>WILSON 95% CI</th><th>VAR. REDUCTION</th><th>MEAN TIME</th></tr></thead><tbody id="research-body"></tbody></table></div></article>
+      <div class="notice research-notice">Variance reduction varies by case and can be below 1×. Normal intervals can materially undercover rare payoffs. These are synthetic GBM experiments, not live market calibration.</div>
+    </section>
+    <section id="page-methodology" class="page" hidden>
+      <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>UNDER THE HOOD</div><h1>Know your assumptions<span class="accent">.</span></h1><p>The mathematics behind the prices, and the limits behind the numbers.</p></div><a class="secondary-button" href="/docs/methodology" target="_blank" rel="noopener">Full methodology ↗</a></div>
+      <div class="method-grid">
+        <article class="panel method-card"><span class="chart-index">01 / THE MODEL</span><h2>Risk-neutral geometric Brownian motion</h2><p>Constant continuously compounded rates and dividend yield. Constant annualised volatility. Exact terminal sampling for European options.</p><div class="formula">S<sub>T</sub> = S₀ exp[(r − q − σ²/2)T + σ√T Z]</div><p>Z is standard normal. The drift r − q is a pricing-measure drift, not a forecast of future market returns. Spot, strike and prices use consistent currency units; T is in years.</p></article>
+        <article class="panel method-card"><span class="chart-index">02 / UNCERTAINTY</span><h2>The right unit of independence</h2><p>Ordinary Monte Carlo uses independent payoffs. Antithetic sampling uses independent averages of each positive/negative shock pair.</p><div class="formula">SE = s(U) / √n &nbsp;&nbsp; CI ≈ estimate ± 1.96 SE</div><p>Intervals rely on a normal CLT approximation. Successive convergence points share samples. Their bands are pointwise, not a simultaneous guarantee. Rare payoffs can make observed variance misleadingly small.</p></article>
+        <article class="panel method-card"><span class="chart-index">03 / VARIANCE REDUCTION</span><h2>A control with a known expectation</h2><p>The discounted terminal stock is correlated with the option payoff. Subtract its centred deviation to remove noise without changing the expectation.</p><div class="formula">Y<sub>CV</sub> = Y − β(X − E[X])</div><p>X = exp(−rT)S<sub>T</sub> and E[X] = S₀ exp(−qT). The coefficient β is fitted on an independent pilot: 10% of the total budget, at least 32 draws. The pilot cost is included.</p></article>
+        <article class="panel method-card"><span class="chart-index">04 / THE EXTENSION</span><h2>Arithmetic-average Asian options</h2><p>Exact GBM increments at explicit equal-weight observation dates. No initial-spot observation unless you include date zero. Payment occurs at maturity.</p><div class="formula">A = (S<sub>t₁</sub> + ⋯ + S<sub>tₘ</sub>) / m</div><p>A geometric-average payoff provides an analytical control expectation. It is not the arithmetic option price. The research report uses an independent numerical arithmetic reference with its own standard error.</p></article>
+      </div>
+      <article class="panel method-bottom"><h2>Reproducibility is part of the result.</h2><p>Every run saves its inputs, random seed, independent-unit counts, confidence method, runtime, raw numerical samples, figures, dependency lock hash and code provenance. Download the complete run to inspect it.</p><span class="local-badge"><span class="status-dot"></span>ALL COMPUTATION STAYS LOCAL</span></article>
+    </section>
+  </main>
+</div>
+<dialog id="details-dialog"><div class="dialog-heading"><h2>Budget & uncertainty</h2><button id="close-details" type="button" aria-label="Close budget details">×</button></div><p>Your sample budget counts <strong>payoff evaluations</strong>, including the control pilot.</p><div id="budget-details"></div><p>Ordinary: N independent payoffs. Antithetic: floor(N/2) independent pairs, two payoffs per pair. Control: N − pilot production units. A deterministic contract is priced analytically with zero draws used.</p><p>Normal intervals can understate uncertainty for rare events. Approximate 95% coverage is a repeated-run property; any particular interval can miss the reference.</p></dialog>
+<div id="toast" role="status" hidden></div>
+</body>
+</html>

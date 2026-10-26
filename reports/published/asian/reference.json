@@ -1,0 +1,21 @@
+{
+  "kind": "independent numerical geometric-control estimate; NOT analytical arithmetic price",
+  "geometric_analytical_price": 5.327705787469695,
+  "method": "control",
+  "requested_samples": 500000,
+  "used_samples": 500000,
+  "effective_samples": 450000,
+  "pilot_samples": 50000,
+  "seed": 429645467759852198,
+  "price": 5.519788166917695,
+  "standard_error": 0.0003274056459314626,
+  "ci_low": 5.5191464636433345,
+  "ci_high": 5.520429870192055,
+  "benchmark_price": null,
+  "absolute_error": null,
+  "runtime_seconds": 0.08072974998503923,
+  "beta": 1.0308678031865506,
+  "zero_payoff_frequency": 0.4751177777777778,
+  "confidence_method": "normal CLT, independent units; conditional on pilot",
+  "warning": ""
+}

@@ -1,0 +1,88 @@
+{
+  "european": {
+    "run_id": "b68726db-6b93-484f-a6b5-f7ffce9ff9ca",
+    "original_folder": "reports/experiments/b68726db-6b93-484f-a6b5-f7ffce9ff9ca",
+    "copies": [
+      {
+        "path": "reports/published/european/estimates.parquet",
+        "sha256": "2252d4123d037c64c4aaf5c0bd62f4b2f26616d8d2cffc1ea71a2d19e77c2cfd"
+      },
+      {
+        "path": "reports/published/european/pricing_cases.parquet",
+        "sha256": "be177326332ff8d91d1816a6cb77985e338bbb2edf4bf134c2aef10fe037abfb"
+      },
+      {
+        "path": "reports/published/european/convergence_points.parquet",
+        "sha256": "7e7cc1de022b3d6524b9ff6a8cd8ae46374f0b4d285cfcb5f85105cb0bf6863f"
+      },
+      {
+        "path": "reports/published/european/configuration.json",
+        "sha256": "ea576a6cc88770ec6011697e993fb790f6effd9c720a91293778e0da96b318a1"
+      },
+      {
+        "path": "reports/published/european/manifest.json",
+        "sha256": "2e4eea52af59ffee90bad0a4489de3531e325d3c5629c113ab88f4670abb8e5a"
+      }
+    ]
+  },
+  "benchmark": {
+    "run_id": "cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d",
+    "original_folder": "reports/experiments/cdb03fd4-5c50-4cb2-a9e0-2a6168b2204d",
+    "copies": [
+      {
+        "path": "reports/published/benchmark/pricing_cases.parquet",
+        "sha256": "e7a86cbfb885ac8483565d90680b14dd248ed506e21fc19647a85ffadd051669"
+      },
+      {
+        "path": "reports/published/benchmark/convergence_rates.parquet",
+        "sha256": "4936cc34f67ea57c1245b208d828b98d7dc19e4d1155a0920840dc4e779e5449"
+      },
+      {
+        "path": "reports/published/benchmark/configuration.json",
+        "sha256": "b2852fe94bda33931a8fe5f44678a52b486f4f4bc871e36e9b331a3f1fec69fb"
+      },
+      {
+        "path": "reports/published/benchmark/manifest.json",
+        "sha256": "25a9036c9f539833eb5c4d6cd5df2cbcef55f1ce9de16864678295a0ab83a77c"
+      },
+      {
+        "path": "reports/published/benchmark/summary.parquet",
+        "sha256": "44f602be4f75bc89fafa5c4827be8e35885576e713e50449797c4a1f985fd9e3"
+      },
+      {
+        "path": "reports/published/benchmark/benchmark_replicates.parquet",
+        "sha256": "3a89e9c0f310076c3007ed6033f9a0e331e9bedd118cfc76d93ed83567b045a8"
+      }
+    ]
+  },
+  "asian": {
+    "run_id": "158e2dff-6404-46bb-b98a-f90a16440d0e",
+    "original_folder": "reports/experiments/158e2dff-6404-46bb-b98a-f90a16440d0e",
+    "copies": [
+      {
+        "path": "reports/published/asian/pricing_cases.parquet",
+        "sha256": "157f93e7fbaf56e4914a703aa1ece4ad18d3d4d8bb147b1e0159fc4a9f42d612"
+      },
+      {
+        "path": "reports/published/asian/reference.json",
+        "sha256": "e76c5557afbbd6c2a875e8c04d54def535036d99699342418959328099fd6a8c"
+      },
+      {
+        "path": "reports/published/asian/configuration.json",
+        "sha256": "e05ea500f235a0cb6a7a1cb5231319ef93da6568b2c25a3ba5871fedd40fa9bd"
+      },
+      {
+        "path": "reports/published/asian/manifest.json",
+        "sha256": "a0e34261cd9b8e97af83f441b42eeb0010cc2ced5579cee8cb6a221515d03d08"
+      },
+      {
+        "path": "reports/published/asian/summary.parquet",
+        "sha256": "efdab7040fea0714db85731fcab57dd76e13a600c8abb4727f5a6f84d494780f"
+      },
+      {
+        "path": "reports/published/asian/asian_replicates.parquet",
+        "sha256": "2d86e801c9e1589ad25898be547cdddf481e0395ff18ee969f85c14a8cd2ffe1"
+      }
+    ]
+  }
+}
