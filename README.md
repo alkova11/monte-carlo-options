@@ -34,7 +34,7 @@ Read the [measured results](docs/RESULTS.md), [methodology](docs/METHODOLOGY.md)
 
 ## Live demo
 
-[Open the public pricing lab](https://monte-carlo-options-lab-alkova11.adeptrhea24.chatgpt.site). First calculation downloads the Python browser runtime. Runs stay in your browser; download a ZIP to keep them. Public budgets are capped at 200,000 payoff evaluations per estimator. See the [publication playbook](docs/DEPLOYMENT_PLAYBOOK.md).
+[Open the public pricing lab](https://mcopricingsim.adeptrhea24.chatgpt.site). First calculation downloads the Python browser runtime. Runs stay in your browser; download a ZIP to keep them. Public budgets are capped at 200,000 payoff evaluations per estimator. See the [publication playbook](docs/DEPLOYMENT_PLAYBOOK.md).
 
 ## Run the app
 
