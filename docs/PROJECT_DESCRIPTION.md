@@ -12,4 +12,4 @@ Repository: https://github.com/alkova11/monte-carlo-options
 
 Model prices are conditional on risk-neutral GBM assumptions; they are not forecasts of market returns.
 
-Live app: https://monte-carlo-options-lab-alkova11.adeptrhea24.chatgpt.site
+Live app: https://mcopricingsim.adeptrhea24.chatgpt.site
